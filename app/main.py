@@ -7,6 +7,9 @@ from app.routers import properties
 from app.routers import property_addresses
 from app.routers import amenities
 from app.routers import property_amenities
+from app.routers import property_photos
+from app.routers import house_rules
+from app.routers import bookings
 app = FastAPI(
     title="airbnb_system api",
     description="API for airbnb_system",
@@ -22,3 +25,6 @@ app.include_router(properties.router)
 app.include_router(property_addresses.router)
 app.include_router(amenities.router)
 app.include_router(property_amenities.router)
+app.include_router(property_photos.router)
+app.include_router(house_rules.router)
+app.include_router(bookings.router)
